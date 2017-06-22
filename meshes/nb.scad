@@ -1,5 +1,5 @@
 $fn = 100;
-// base del brazo 
+// base del brazo
 d = 0.06;
 h = 0.20;
 
@@ -25,9 +25,9 @@ cylinder(mh*0.2,l*1.2,l*0.8);
 /*
 translate ([-m/2,-m/2,0])
 {
-    
 
-    
+
+
     union()
     {
         translate([0,m/4,0])
@@ -41,4 +41,3 @@ translate ([-m/2,-m/2,0])
 
 }
 */
-

@@ -1,3 +1,3 @@
-rosrun xacro xacro nv0_1.xacro > expanded_xacro.urdf --inorder
+rosrun xacro xacro n.xacro > expanded_xacro.urdf --inorder
 check_urdf expanded_xacro.urdf
 urdf_to_graphiz expanded_xacro.urdf
