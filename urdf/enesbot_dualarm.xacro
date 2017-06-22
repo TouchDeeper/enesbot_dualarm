@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name ="enesbot_dualarm_v0.1">
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name ="enesbot_dualarm">
 
   <xacro:macro name="segment" params="n parent child cad_type xyz origin rpy">
 
