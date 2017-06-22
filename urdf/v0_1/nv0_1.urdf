@@ -1,0 +1,211 @@
+<robot name ="nv0.1">
+	<link name="map">
+		<visual>
+			<geometry>
+				<mesh filename="package://enesbot_dualarm/meshes/v0_1/nv01base.stl"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="uarmR">
+		<visual>
+			<geometry>
+				<mesh filename="package://enesbot_dualarm/meshes/v0_1/nv01shoulder.stl"/>
+			</geometry>
+		</visual>
+ 	</link>
+	<link name="bicepR">
+		<visual>
+			<geometry>
+				<mesh filename="package://enesbot_dualarm/meshes/v0_1/nv01shoulder2.stl"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="forearmR">
+		<visual>
+			<geometry>
+				<mesh filename="package://enesbot_dualarm/meshes/v0_1/nv01shoulder.stl"/>
+			</geometry>
+		</visual>
+ 	</link>
+	<link name="forearm2R">
+		<visual>
+			<geometry>
+				<mesh filename="package://enesbot_dualarm/meshes/v0_1/nv01shoulder2.stl"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="wristR">
+		<visual>
+			<geometry>
+				<mesh filename="package://enesbot_dualarm/meshes/v0_1/nv01shoulder.stl"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="wrist2R">
+		<visual>
+			<geometry>
+				<mesh filename="package://enesbot_dualarm/meshes/v0_1/nv01shoulder2.stl"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="toolR">
+		<visual>
+			<material name = "white">
+				<color rgba="1 1 1 1"/>
+			</material>
+			<geometry>
+				<mesh filename="package://enesbot_dualarm/meshes/v0_1/nv01tool.stl"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="uarmL">
+		<visual>
+			<geometry>
+				<mesh filename="package://enesbot_dualarm/meshes/v0_1/nv01shoulder.stl"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="bicepL">
+		<visual>
+			<geometry>
+				<mesh filename="package://enesbot_dualarm/meshes/v0_1/nv01shoulder2.stl"/>
+			</geometry>
+		</visual>
+ 	</link>
+	<link name="forearmL">
+		<visual>
+			<geometry>
+				<mesh filename="package://enesbot_dualarm/meshes/v0_1/nv01shoulder.stl"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="forearm2L">
+		<visual>
+			<geometry>
+				<mesh filename="package://enesbot_dualarm/meshes/v0_1/nv01shoulder2.stl"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="wristL">
+		<visual>
+			<geometry>
+				<mesh filename="package://enesbot_dualarm/meshes/v0_1/nv01shoulder.stl"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="wrist2L">
+		<visual>
+			<geometry>
+				<mesh filename="package://enesbot_dualarm/meshes/v0_1/nv01shoulder2.stl"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="toolL">
+		<visual>
+			<material name = "white">
+				<color rgba="1 1 1 1"/>
+			</material>
+			<geometry>
+				<mesh filename="package://enesbot_dualarm/meshes/v0_1/nv01tool.stl"/>
+			</geometry>
+		</visual>
+	</link>
+
+	<joint name="baseR" type="continuous">
+		<parent link="map"/>
+		<child link="uarmR"/>
+		<origin xyz = "0 -0.15 0.4" rpy="0 -0.523599 -0.523599"/>
+
+	</joint>
+
+	<joint name="shoulderR" type="continuous">
+		<parent link="uarmR"/>
+		<child link="bicepR"/>
+		<origin xyz = "0.1 0 0" />
+		<axis xyz="0 0 1"/>
+	</joint>
+
+	<joint name="showlder2R" type="continuous">
+		<parent link="bicepR"/>
+		<child link="forearmR"/>
+		<origin xyz = "0.1 0 0" />
+		<axis xyz="1 0 0"/>
+	</joint>
+
+	<joint name="elbowR" type="continuous">
+		<parent link="forearmR"/>
+		<child link="forearm2R"/>
+		<origin xyz = "0.1 0 0" />
+		<axis xyz="0 0 1"/>
+	</joint>
+
+	<joint name="elbow2R" type="continuous">
+		<parent link="forearm2R"/>
+		<child link="wristR"/>
+		<origin xyz = "0.1 0 0" />
+		<axis xyz="1 0 0"/>
+	</joint>
+
+	<joint name="wristR" type="continuous">
+		<parent link="wristR"/>
+		<child link="wrist2R"/>
+		<origin xyz = "0.1 0 0" />
+		<axis xyz="0 0 1"/>
+	</joint>
+
+	<joint name="toolR" type="continuous">
+		<parent link="wrist2R"/>
+		<child link="toolR"/>
+		<origin xyz = "0.1 0 0" />
+		<axis xyz="1 0 0"/>
+	</joint>
+
+	<joint name="baseL" type="continuous">
+		<parent link="map"/>
+		<child link="uarmL"/>
+		<origin xyz = "0 0.15 0.4" rpy="0 -0.523599 0.523599"/>
+		<axis xyz="1 0 0"/>
+	</joint>
+
+	<joint name="shoulderL" type="continuous">
+		<parent link="uarmL"/>
+		<child link="bicepL"/>
+		<origin xyz = "0.1 0 0" />
+		<axis xyz="0 0 1"/>
+	</joint>
+
+	<joint name="showlder2L" type="continuous">
+		<parent link="bicepL"/>
+		<child link="forearmL"/>
+		<origin xyz = "0.1 0 0" />
+		<axis xyz="1 0 0"/>
+	</joint>
+
+	<joint name="elbowL" type="continuous">
+		<parent link="forearmL"/>
+		<child link="forearm2L"/>
+		<origin xyz = "0.1 0 0" />
+		<axis xyz="0 0 1"/>
+	</joint>
+
+	<joint name="elbow2L" type="continuous">
+		<parent link="forearm2L"/>
+		<child link="wristL"/>
+		<origin xyz = "0.1 0 0" />
+		<axis xyz="1 0 0"/>
+	</joint>
+
+	<joint name="wristL" type="continuous">
+		<parent link="wristL"/>
+		<child link="wrist2L"/>
+		<origin xyz = "0.1 0 0" />
+		<axis xyz="0 0 1"/>
+	</joint>
+
+	<joint name="toolL" type="continuous">
+		<parent link="wrist2L"/>
+		<child link="toolL"/>
+		<origin xyz = "0.1 0 0" />
+		<axis xyz="1 0 0"/>
+	</joint>
+</robot>

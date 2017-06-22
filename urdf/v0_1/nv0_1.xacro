@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name ="enesbot_dualarm_v0.1">
+
+  <xacro:macro name="segment" params="n parent child tipo_cad xyz origin rpy">
+
+    <joint name="j${n}" type="continuous">
+      <parent link="${parent}"/>
+      <child link="${child}"/>
+      <origin xyz = "${origin}" rpy="${rpy}" />
+      <axis xyz="${xyz}" />
+    </joint>
+
+    <link name="${child}">
+      <visual>
+        <geometry>
+          <mesh filename="package://enesbot_dualarm/meshes/v0_1/nv01_${tipo_cad}.stl"/>
+        </geometry>
+        <xacro:if value="${tipo_cad == 2}">
+          <material name = "white">
+    				<color rgba="1 1 1 1"/>
+    			</material>
+        </xacro:if>
+      </visual>
+    </link>
+
+  </xacro:macro>
+
+	<link name="map">
+		<visual>
+			<geometry>
+				<mesh filename="package://enesbot_dualarm/meshes/v0_1/nv01base.stl"/>
+			</geometry>
+		</visual>
+	</link>
+
+  <xacro:segment n="r1" parent="map" child="r1"   tipo_cad="1" xyz="1 0 0" origin="0 -0.15 0.4" rpy="0 -0.523599 -0.523599" />
+  <xacro:segment n="r2" parent="r1"  child="r2"   tipo_cad="0" xyz="0 0 1" origin="0.1 0 0" rpy="0 0 0" />
+  <xacro:segment n="r3" parent="r2"  child="r3"   tipo_cad="1" xyz="1 0 0" origin="0.1 0 0" rpy="0 0 0" />
+  <xacro:segment n="r4" parent="r3"  child="r4"   tipo_cad="0" xyz="0 0 1" origin="0.1 0 0" rpy="0 0 0" />
+  <xacro:segment n="r5" parent="r4"  child="r5"   tipo_cad="1" xyz="1 0 0" origin="0.1 0 0" rpy="0 0 0" />
+  <xacro:segment n="r6" parent="r5"  child="r6"   tipo_cad="0" xyz="0 0 1" origin="0.1 0 0" rpy="0 0 0" />
+  <xacro:segment n="r7" parent="r6"  child="r7"   tipo_cad="2" xyz="1 0 0" origin="0.1 0 0" rpy="0 0 0" />
+
+  <xacro:segment n="l1" parent="map" child="l1"   tipo_cad="1" xyz="1 0 0" origin="0 0.15 0.4" rpy="0 -0.523599 0.523599" />
+  <xacro:segment n="l2" parent="l1"  child="l2"   tipo_cad="0" xyz="0 0 1" origin="0.1 0 0" rpy="0 0 0" />
+  <xacro:segment n="l3" parent="l2"  child="l3"   tipo_cad="1" xyz="1 0 0" origin="0.1 0 0" rpy="0 0 0" />
+  <xacro:segment n="l4" parent="l3"  child="l4"   tipo_cad="0" xyz="0 0 1" origin="0.1 0 0" rpy="0 0 0" />
+  <xacro:segment n="l5" parent="l4"  child="l5"   tipo_cad="1" xyz="1 0 0" origin="0.1 0 0" rpy="0 0 0" />
+  <xacro:segment n="l6" parent="l5"  child="l6"   tipo_cad="0" xyz="0 0 1" origin="0.1 0 0" rpy="0 0 0" />
+  <xacro:segment n="l7" parent="l6"  child="l7"   tipo_cad="2" xyz="1 0 0" origin="0.1 0 0" rpy="0 0 0" />
+
+</robot>

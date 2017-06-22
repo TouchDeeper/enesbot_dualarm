@@ -1,0 +1,47 @@
+digraph G {
+node [shape=box];
+"map" [label="map"];
+"l1" [label="l1"];
+"l2" [label="l2"];
+"l3" [label="l3"];
+"l4" [label="l4"];
+"l5" [label="l5"];
+"l6" [label="l6"];
+"l7" [label="l7"];
+"r1" [label="r1"];
+"r2" [label="r2"];
+"r3" [label="r3"];
+"r4" [label="r4"];
+"r5" [label="r5"];
+"r6" [label="r6"];
+"r7" [label="r7"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"map" -> "jl1" [label="xyz: 0 0.15 0.4 \nrpy: 3.20494e-17 -0.523599 0.523599"]
+"jl1" -> "l1"
+"l1" -> "jl2" [label="xyz: 0.1 0 0 \nrpy: 0 -0 0"]
+"jl2" -> "l2"
+"l2" -> "jl3" [label="xyz: 0.1 0 0 \nrpy: 0 -0 0"]
+"jl3" -> "l3"
+"l3" -> "jl4" [label="xyz: 0.1 0 0 \nrpy: 0 -0 0"]
+"jl4" -> "l4"
+"l4" -> "jl5" [label="xyz: 0.1 0 0 \nrpy: 0 -0 0"]
+"jl5" -> "l5"
+"l5" -> "jl6" [label="xyz: 0.1 0 0 \nrpy: 0 -0 0"]
+"jl6" -> "l6"
+"l6" -> "jl7" [label="xyz: 0.1 0 0 \nrpy: 0 -0 0"]
+"jl7" -> "l7"
+"map" -> "jr1" [label="xyz: 0 -0.15 0.4 \nrpy: -3.20494e-17 -0.523599 -0.523599"]
+"jr1" -> "r1"
+"r1" -> "jr2" [label="xyz: 0.1 0 0 \nrpy: 0 -0 0"]
+"jr2" -> "r2"
+"r2" -> "jr3" [label="xyz: 0.1 0 0 \nrpy: 0 -0 0"]
+"jr3" -> "r3"
+"r3" -> "jr4" [label="xyz: 0.1 0 0 \nrpy: 0 -0 0"]
+"jr4" -> "r4"
+"r4" -> "jr5" [label="xyz: 0.1 0 0 \nrpy: 0 -0 0"]
+"jr5" -> "r5"
+"r5" -> "jr6" [label="xyz: 0.1 0 0 \nrpy: 0 -0 0"]
+"jr6" -> "r6"
+"r6" -> "jr7" [label="xyz: 0.1 0 0 \nrpy: 0 -0 0"]
+"jr7" -> "r7"
+}
