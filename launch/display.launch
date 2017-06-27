@@ -1,6 +1,6 @@
 <launch>
 	
-	<arg name = "model" default = "$(find enesbot_dualarm)/urdf/n.xacro"/>
+	<arg name = "model" default = "$(find enesbot_dualarm)/urdf/enesbot_dualarm.xacro"/>
 	<arg name="rvizconfig" default="$(find enesbot_dualarm)/rviz/conf.rviz" />
 	<param name = "robot_description" command="$(find xacro)/xacro $(arg model) --inorder"/>
 	<param name="use_gui" value="true"/>
