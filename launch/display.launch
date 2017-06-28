@@ -1,11 +1,13 @@
 <launch>
-	
-	<arg name = "model" default = "$(find enesbot_dualarm)/urdf/enesbot_dualarm.xacro"/>
-	<arg name="rvizconfig" default="$(find enesbot_dualarm)/rviz/conf.rviz" />
-	<param name = "robot_description" command="$(find xacro)/xacro $(arg model) --inorder"/>
-	<param name="use_gui" value="true"/>
-	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
-	<node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
-	<node name="rviz" pkg="rviz" type="rviz" required="true" args="-d $(arg rvizconfig)"/>
+
+	<arg name= "model" 			default= "$(find enesbot_dualarm)/urdf/enesbot_dualarm.xacro"/>
+	<arg name= "rvizconfig" default= "$(find enesbot_dualarm)/rviz/conf.rviz" />
+
+	<param name= "robot_description" 	command= "$(find xacro)/xacro $(arg model) --inorder"/>
+	<param name= "use_gui" 						value=   "true"/>
+
+	<node pkg="rviz" required="true"  name= "rviz"  type="rviz" 		args="-d $(arg rvizconfig)"/>
+	<node pkg="joint_state_publisher" name= "joint_state_publisher" type="joint_state_publisher" />
+	<node pkg="robot_state_publisher" name= "robot_state_publisher" type="robot_state_publisher" />
 
 </launch>

@@ -1,0 +1,15 @@
+<launch>
+
+  <arg name= "model" 			default= "$(find enesbot_dualarm)/urdf/enesbot_dualarm.xacro"/>
+	<arg name= "rvizconfig" default= "$(find enesbot_dualarm)/rviz/conf.rviz" />
+
+	<param name= "robot_description" 	command= "$(find xacro)/xacro $(arg model) --inorder"/>
+	<param name= "use_gui" 						value=   "true"/>
+
+	<node pkg="rviz" required="true"  name= "rviz"                  type= "rviz" 		args="-d $(arg rvizconfig)"/>
+	<node pkg="robot_state_publisher" name= "robot_state_publisher" type="robot_state_publisher" />
+  <node pkg="joint_state_publisher" name= "joint_state_publisher" type="joint_state_publisher" />
+  <node pkg="enesbot_dualarm"       name= "my_tf_listener"        type="tf_subscriber.py"         output="screen"/>
+  <node pkg="tf"                    name= "tf_echo"               type= "tf_echo" args="map r7 1" output="screen" />
+
+</launch>
