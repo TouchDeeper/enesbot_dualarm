@@ -25,7 +25,7 @@
 
   </xacro:macro>
 
-	<link name="map">
+	<link name="root">
 		<visual>
 			<geometry>
 				<mesh filename="package://enesbot_dualarm/meshes/nb.stl"/>
@@ -33,7 +33,7 @@
 		</visual>
 	</link>
 
-  <xacro:segment n="r1" parent="map" child="r1"   cad_type="1" xyz="1 0 0" origin="0 -0.15 0.4" rpy="0 -0.523599 -0.523599" />
+  <xacro:segment n="r1" parent="root" child="r1"   cad_type="1" xyz="1 0 0" origin="0 -0.15 0.4" rpy="0 -0.523599 -0.523599" />
   <xacro:segment n="r2" parent="r1"  child="r2"   cad_type="0" xyz="0 0 1" origin="0.1 0 0" rpy="0 0 0" />
   <xacro:segment n="r3" parent="r2"  child="r3"   cad_type="1" xyz="1 0 0" origin="0.1 0 0" rpy="0 0 0" />
   <xacro:segment n="r4" parent="r3"  child="r4"   cad_type="0" xyz="0 0 1" origin="0.1 0 0" rpy="0 0 0" />
@@ -41,7 +41,7 @@
   <xacro:segment n="r6" parent="r5"  child="r6"   cad_type="0" xyz="0 0 1" origin="0.1 0 0" rpy="0 0 0" />
   <xacro:segment n="r7" parent="r6"  child="r7"   cad_type="2" xyz="1 0 0" origin="0.1 0 0" rpy="0 0 0" />
 
-  <xacro:segment n="l1" parent="map" child="l1"   cad_type="1" xyz="1 0 0" origin="0 0.15 0.4" rpy="0 -0.523599 0.523599" />
+  <xacro:segment n="l1" parent="root" child="l1"   cad_type="1" xyz="1 0 0" origin="0 0.15 0.4" rpy="0 -0.523599 0.523599" />
   <xacro:segment n="l2" parent="l1"  child="l2"   cad_type="0" xyz="0 0 1" origin="0.1 0 0" rpy="0 0 0" />
   <xacro:segment n="l3" parent="l2"  child="l3"   cad_type="1" xyz="1 0 0" origin="0.1 0 0" rpy="0 0 0" />
   <xacro:segment n="l4" parent="l3"  child="l4"   cad_type="0" xyz="0 0 1" origin="0.1 0 0" rpy="0 0 0" />

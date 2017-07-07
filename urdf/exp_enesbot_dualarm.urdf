@@ -4,7 +4,7 @@
 <!-- |    EDITING THIS FILE BY HAND IS NOT RECOMMENDED                                 | -->
 <!-- =================================================================================== -->
 <robot name="enesbot_dualarm" xmlns:xacro="http://www.ros.org/wiki/xacro">
-  <link name="map">
+  <link name="root">
     <visual>
       <geometry>
         <mesh filename="package://enesbot_dualarm/meshes/nb.stl"/>
@@ -12,7 +12,7 @@
     </visual>
   </link>
   <joint name="jr1" type="continuous">
-    <parent link="map"/>
+    <parent link="root"/>
     <child link="r1"/>
     <origin rpy="0 -0.523599 -0.523599" xyz="0 -0.15 0.4"/>
     <axis xyz="1 0 0"/>
@@ -106,7 +106,7 @@
     </visual>
   </link>
   <joint name="jl1" type="continuous">
-    <parent link="map"/>
+    <parent link="root"/>
     <child link="l1"/>
     <origin rpy="0 -0.523599 0.523599" xyz="0 0.15 0.4"/>
     <axis xyz="1 0 0"/>

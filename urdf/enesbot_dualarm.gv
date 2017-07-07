@@ -1,6 +1,6 @@
 digraph G {
 node [shape=box];
-"map" [label="map"];
+"root" [label="root"];
 "l1" [label="l1"];
 "l2" [label="l2"];
 "l3" [label="l3"];
@@ -16,7 +16,7 @@ node [shape=box];
 "r6" [label="r6"];
 "r7" [label="r7"];
 node [shape=ellipse, color=blue, fontcolor=blue];
-"map" -> "jl1" [label="xyz: 0 0.15 0.4 \nrpy: 3.20494e-17 -0.523599 0.523599"]
+"root" -> "jl1" [label="xyz: 0 0.15 0.4 \nrpy: 3.20494e-17 -0.523599 0.523599"]
 "jl1" -> "l1"
 "l1" -> "jl2" [label="xyz: 0.1 0 0 \nrpy: 0 -0 0"]
 "jl2" -> "l2"
@@ -30,7 +30,7 @@ node [shape=ellipse, color=blue, fontcolor=blue];
 "jl6" -> "l6"
 "l6" -> "jl7" [label="xyz: 0.1 0 0 \nrpy: 0 -0 0"]
 "jl7" -> "l7"
-"map" -> "jr1" [label="xyz: 0 -0.15 0.4 \nrpy: -3.20494e-17 -0.523599 -0.523599"]
+"root" -> "jr1" [label="xyz: 0 -0.15 0.4 \nrpy: -3.20494e-17 -0.523599 -0.523599"]
 "jr1" -> "r1"
 "r1" -> "jr2" [label="xyz: 0.1 0 0 \nrpy: 0 -0 0"]
 "jr2" -> "r2"
