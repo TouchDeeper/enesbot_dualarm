@@ -1,0 +1,35 @@
+controller_list:
+  - name: fake_left_arm_controller
+    joints:
+      - jl1
+      - jl2
+      - jl3
+      - jl4
+      - jl5
+      - jl6
+      - jl7
+  - name: fake_right_arm_controller
+    joints:
+      - jr1
+      - jr2
+      - jr3
+      - jr4
+      - jr5
+      - jr6
+      - jr7
+  - name: fake_robot_controller
+    joints:
+      - jl1
+      - jl2
+      - jl3
+      - jl4
+      - jl5
+      - jl6
+      - jl7
+      - jr1
+      - jr2
+      - jr3
+      - jr4
+      - jr5
+      - jr6
+      - jr7
