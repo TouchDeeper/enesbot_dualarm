@@ -10,6 +10,6 @@
 	<node pkg="robot_state_publisher" name= "robot_state_publisher" type="robot_state_publisher" />
   <node pkg="joint_state_publisher" name= "joint_state_publisher" type="joint_state_publisher" />
   <node pkg="enesbot_dualarm"       name= "my_tf_listener"        type="tf_subscriber.py"         output="screen"/>
-  <node pkg="tf"                    name= "tf_echo"               type= "tf_echo" args="map r7 1" output="screen" />
+  <node pkg="tf"                    name= "tf_echo"               type= "tf_echo" args="root r7 1" output="screen" />
 
 </launch>

@@ -79,7 +79,7 @@
     <end_effector name="right_gripper" parent_link="r7" group="right_arm" parent_group="robot" />
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
     <disable_collisions link1="l1" link2="l2" reason="Adjacent" />
-    <disable_collisions link1="l1" link2="map" reason="Adjacent" />
+    <disable_collisions link1="l1" link2="root" reason="Adjacent" />
     <disable_collisions link1="l1" link2="r1" reason="Never" />
     <disable_collisions link1="l1" link2="r2" reason="Never" />
     <disable_collisions link1="l1" link2="r3" reason="Never" />
@@ -95,7 +95,7 @@
     <disable_collisions link1="l4" link2="r1" reason="Never" />
     <disable_collisions link1="l5" link2="l6" reason="Adjacent" />
     <disable_collisions link1="l6" link2="l7" reason="Adjacent" />
-    <disable_collisions link1="map" link2="r1" reason="Adjacent" />
+    <disable_collisions link1="root" link2="r1" reason="Adjacent" />
     <disable_collisions link1="r1" link2="r2" reason="Adjacent" />
     <disable_collisions link1="r2" link2="r3" reason="Adjacent" />
     <disable_collisions link1="r3" link2="r4" reason="Adjacent" />

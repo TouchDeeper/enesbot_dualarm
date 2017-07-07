@@ -15,7 +15,7 @@ while not rospy.is_shutdown():
 
     try:
         # Get last ( Time(0) )transform from the base frame to frame l7
-        frame_info = tfBuffer.lookup_transform('map', 'l7', rospy.Time(0))
+        frame_info = tfBuffer.lookup_transform('root', 'l7', rospy.Time(0))
         print (frame_info)
 
     except (tf2_ros.TransformException):
