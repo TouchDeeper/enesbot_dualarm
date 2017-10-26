@@ -1,4 +1,4 @@
-# enesbot_dualarm 0.2
+# enesbot_dualarm 0.1
 
 ROS package that implements a dual-arm robot manipulator. The purpose of this robot is to demonstrate how to create a robot in ROS using its different tools.
 
