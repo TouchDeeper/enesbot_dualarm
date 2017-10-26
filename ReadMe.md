@@ -6,7 +6,6 @@ For more tutorials visit [enesbot.me](http://enesbot.me)
 
 |  version  |     change      |
 |-----------|-----------------|
-| 0.2       | added *Moveit!* |
 | 0.1       | created URDF    |
 
 ## To-do list
